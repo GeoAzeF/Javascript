@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos parte 2</title>
+</head>
+<body>
+    <h1>Primeiros passos parte 2 (para maior organização)</h1>
+    <p id="par1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Aspernatur provident fuga possimus placeat at eum iusto 
+        voluptates dicta, quia ut? Tenetur repudiandae minima enim 
+        quod atque officiis corporis blanditiis quae.
+    </p>
+    <p id="par2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Commodi quod labore accusantium ullam quis quia doloribus 
+        beatae laboriosam? Commodi vero cupiditate cum alias fugiat 
+        quo itaque distinctio accusantium quos exercitationem?
+    </p>
+    <p id="par3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Voluptas error fugit eveniet perspiciatis architecto, placeat 
+        atque fugiat nisi omnis doloremque iusto velit. Esse ullam 
+        perferendis repudiandae possimus rem aut dolores?
+    </p>
+    <script>
+        //Já que existem 3(três) parágrafos, poder-se-ia
+        //selecioná-los das seguintes formas:
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByTagName('p')[1]
+        var p3 = window.document.getElementsByTagName('p')[2]
+        p1.style.color = 'Blue'
+        p2.style.color = 'Green'
+        p3.style.color = 'Red'
+        // ou...
+        var par1 = window.document.getElementById('par1')
+        par1.style.backgroundColor = 'Gray'
+        var par2 = window.document.getElementById('par2')
+        par2.style.backgroundColor = 'Black'
+        var par3 = window.document.getElementById('par3')
+        par3.style.backgroundColor = 'Khaki'
+        // ou...
+        var parag1 = window.document.querySelector('p#par1')
+        parag1.innerText = 'Olá, mundo!'
+        var parag2 = window.document.querySelector('p#par2')
+        parag2.innerText = 'Hello, world!'
+        var parag3 = window.document.querySelector('p#par3')
+        parag3.innerText = 'Todos os parágrafos (inclusive este)'
+        + ' eram Lorem Ipsum e em preto e branco. As cores das'
+        + ' palavras foram alteradas pelos comandos'
+        + ' window.document.getElementsByTagName("tag")[#].'
+        + ' As cores de fundo foram alteradas pelos comandos'
+        + ' window.document.getElementById("nomeDaId").'
+        + ' Os Lorem Ipsums de todos os parágrafos foram substituídos'
+        + ' usando o comando window.document.querySelector("tag#Id").'
+    </script>
+</body>
+</html>

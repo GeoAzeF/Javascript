@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#Area{
+            font: normal 20pt Arial;
+            background-color: rgb(50, 173, 50);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Este evento DOM foi feito modificando tanto
+        HTML quanto os scripts
+    </p>
+    <div id='Area' onmouseenter="entrar()" 
+    onmouseleave="sair()" onclick="clicar()">
+        Cursor está fora
+    </div>
+    <script>
+        var area = window.document.getElementById('Area')
+        function entrar(){
+            area.innerText = "Cursor entrou"
+            area.style.backgroundColor = "rgb(50,173,50)"
+        }
+        function sair(){
+            area.innerText = "Cursor saiu"
+            area.style.backgroundColor = "rgb(50,173,50)"
+        }
+        function clicar(){
+            area.innerText = "Clicou"
+            area.style.backgroundColor = 'Pink'
+        }
+    </script>
+</body>
+</html>

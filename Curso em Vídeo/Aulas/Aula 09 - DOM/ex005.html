@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(121, 177, 121);
+            font: normal 18pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM (Document Object Model)</h1>
+    <p>
+        Aqui vai o resultado
+    </p>
+    <p>
+        Aprendendo a usar o <strong>DOM</strong> em Javascript
+    </p>
+    <div>
+        Clique em mim
+    </div>
+    <script>
+        window.document.write('<br>Olá, mundo!<br><br>')
+        window.document.write(window.navigator.appName)
+        window.document.write(window.document.URL)
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByTagName('p')[1]
+        p1.style.color = 'pink'
+        p2.style.backgroundColor = 'pink'
+        var corpo = window.document.body
+        // A partir daqui, testes criados por mim mesmo:
+        var div1 = window.document.getElementsByTagName('div')[0]
+        div1.style.color = 'gold'
+        window.document.write('<br><br>P1 está escrito assim: ' + 
+        p1.innerText + ' (usando o comando <strong>.innerText</strong>)')
+        window.document.write('<br><br>P2 está escrito assim: ' + 
+        p2.innerText + ' (usando o comando <strong>.innerText</strong>)')
+        window.document.write('<br><br>Agora, usando o comando' +
+        '<strong>.innerHTML</strong>, P2 está escrito assim: <br>' + p2.innerHTML)
+        window.document.write('<br><br>Ao usar o comando <strong>.innerText</strong>,' +
+        'copia-se o texto, mas não sua formatação. No comando <strong>.innerHTML</strong>, '
+        + 'copia-se <strong>texto + formatação</strong>')
+        window.alert(div1.innerText)
+    </script>
+</body>
+</html>

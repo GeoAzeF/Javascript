@@ -1,0 +1,15 @@
+section{
+    font: normal 20pt Arial;
+    border-radius: 16px;
+    background-color: rgb(104, 207, 211);
+    padding: 20px;
+}
+
+input[type="button"]{
+    font: normal 14pt Arial;
+}
+
+input[type="number"]{
+    font: normal 14pt Arial;
+}
+

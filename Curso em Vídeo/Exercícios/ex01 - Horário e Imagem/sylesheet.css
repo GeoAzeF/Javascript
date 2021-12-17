@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+    font: normal 20pt Arial;
+}
+#div1{
+    color: white;
+}
+
+#div2{
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    width: 500px;
+    height: 320px;
+    padding: 15px;
+    border-radius: 15px;
+}

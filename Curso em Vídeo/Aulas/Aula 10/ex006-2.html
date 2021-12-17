@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM (Parte II)</title>
+    <style>
+        div{
+            font: normal 20pt Arial;
+            background-color: green;
+            color: white;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Estes eventos foram acionados modificando os scripts.
+        A parte HTML não foi alterada.
+    </p>
+    <div id="area">
+        Interaja
+    </div>
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar(){
+            area.style.backgroundColor = 'Pink'
+            area.innerText = 'Clicou'
+        }
+        function entrar(){
+            area.style.backgroundColor = 'Green'
+            area.innerText = 'Entrou'
+        }
+        function sair(){
+            area.style.backgroundColor = 'Green'
+            area.innerText = 'Saiu'
+        }
+    </script>
+</body>
+</html>
